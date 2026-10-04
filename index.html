@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dragon d’Or — Restaurant asiatique à Niamey</title>
+    <meta name="description" content="Dragon d’Or, restaurant asiatique à Niamey : cuisine chinoise raffinée, plat du jour, salles VIP, buffet du samedi soir. Réservez votre table." />
+    <meta name="keywords" content="Dragon d’Or Niamey, restaurant chinois Niamey, cuisine asiatique, canard laqué, fondue chinoise, plat du jour" />
+    <meta name="author" content="Dragon d’Or" />
+    <meta name="theme-color" content="#dc2626" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dragon d’Or — Restaurant asiatique à Niamey" />
+    <meta property="og:description" content="Cuisine chinoise raffinée, plat du jour, salles VIP, service d’exception." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/hero.jpg" />
+    <meta property="og:url" content="https://ton-domaine/dragon-dor" /> <!-- TODO : ton vrai domaine -->
+
+    <!-- Icônes & PWA -->
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icons/logo-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icons/logo-512x512.png" />
+    <link rel="apple-touch-icon" href="images/icons/logo-192x192.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <style>
+      html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+      [x-cloak] { display: none !important; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        * { transition: none !important; }
+      }
+    </style>
+  </head>
+
+  <body class="bg-black text-white">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 bg-black/80 backdrop-blur border-b border-red-900/30">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-white" aria-label="Navigation principale">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#accueil" class="flex items-center gap-3">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-red-600 text-white font-bold">DÔ</span>
+            <span class="text-lg font-semibold text-red-200">Dragon d’Or</span>
+          </a>
+          <ul class="hidden font-bold md:flex items-center gap-6 text-sm">
+            <li><a href="#accueil" class="hover:text-red-400">Accueil</a></li>
+            <li><a href="#apropos" class="hover:text-red-400">À propos</a></li>
+            <li><a href="#plat-du-jour" class="hover:text-red-400">Plat du jour</a></li>
+            <li><a href="#menu" class="hover:text-red-400">Menu</a></li>
+            <li><a href="#galerie" class="hover:text-red-400">Galerie</a></li>
+            <li><a href="#reservation" class="hover:text-red-400">Contact</a></li>
+            <li>
+              <a href="#reservation" class="inline-flex items-center rounded-full bg-red-600 px-4 py-2 text-white hover:bg-red-700">Réserver</a>
+            </li>
+          </ul>
+          <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-white/10" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden pb-4 font-bold">
+          <div class="flex flex-col gap-2 border-t border-white/10 pt-4">
+            <a href="#accueil" class="px-2 py-2 rounded hover:bg-white/10">Accueil</a>
+            <a href="#apropos" class="px-2 py-2 rounded hover:bg-white/10">À propos</a>
+            <a href="#plat-du-jour" class="px-2 py-2 rounded hover:bg-white/10">Plat du jour</a>
+            <a href="#menu" class="px-2 py-2 rounded hover:bg-white/10">Menu</a>
+            <a href="#galerie" class="px-2 py-2 rounded hover:bg-white/10">Galerie</a>
+            <a href="#reservation" class="px-2 py-2 rounded hover:bg-white/10">Contact</a>
+            <a href="#reservation" class="mt-1 inline-flex items-center justify-center rounded-full bg-red-600 px-4 py-2 hover:bg-red-700">Réserver</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="accueil" class="relative min-h-[85vh] bg-cover bg-center" style="background-image: url('image.jpg')">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 min-h-[85vh] mx-auto max-w-7xl px-6 flex flex-col items-center justify-center text-center">
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+            Cuisine chinoise • Salles VIP • Service d’exception
+          </h1>
+          <p class="mt-4 text-lg md:text-xl max-w-3xl font-bold">
+            Découvrez des recettes authentiques et raffinées, préparées par nos chefs, dans une ambiance élégante.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <a href="#reservation" class="rounded-full bg-red-600 px-6 py-3 hover:bg-red-700 font-bold">Réserver une table</a>
+            <a href="#plat-du-jour" class="rounded-full border border-red-400/60 px-6 py-3 hover:bg-red-700 font-bold">Plat du jour</a>
+            <a href="#menu" class="rounded-full border border-red-400/60 px-6 py-3 hover:bg-red-700 font-bold">Voir le menu</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- À propos -->
+      <section id="apropos" class="py-16 bg-gradient-to-b from-black to-zinc-900">
+        <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-10 items-center">
+          <img src="salle reception.jpg" alt="Salle du restaurant Dragon d’Or" loading="lazy" class="rounded-xl shadow-lg object-cover w-full h-72 md:h-96" />
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-red-200">L’art de recevoir</h2>
+            <p class="mt-4 text-gray-300 font-semibold">
+              Le restaurant Dragon d’Or vous accueille à Niamey dans un cadre raffiné : salons privés, salle principale, terrasse.
+              Notre carte propose canard laqué, fondue chinoise, dim sum et spécialités wok.
+            </p>
+            <ul class="mt-6 space-y-2 text-gray-300 list-disc list-inside font-semibold">
+              <li>Salles VIP jusqu’à 12 couverts</li>
+              <li>Service continu midi &amp; soir</li>
+              <li>Évènements privés (anniversaires, affaires)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Plat du jour -->
+      <section id="plat-du-jour" class="py-16 bg-gradient-to-b from-zinc-900 to-black">
+        <div class="mx-auto max-w-5xl px-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-red-200">Plat du jour</h2>
+          <p class="mt-2 text-center text-gray-300 font-semibold">
+            Chaque jour, nos chefs vous proposent une recette différente.
+          </p>
+
+          <!-- Sélecteur de jour -->
+          <div id="pdjTabs" class="mt-8 flex flex-wrap justify-center gap-2" role="tablist" aria-label="Choisir un jour"></div>
+
+          <!-- Carte du plat -->
+          <article id="pdjCard" class="mt-6 grid md:grid-cols-[1fr_2fr] overflow-hidden rounded-2xl border border-red-900/40 bg-zinc-900 shadow-lg" aria-live="polite"></article>
+
+          <p class="mt-4 text-center text-sm text-gray-400">
+            Disponible midi &amp; soir, dans la limite des stocks. Le plat du jour peut changer selon l’arrivage.
+          </p>
+        </div>
+      </section>
+
+      <!-- Menu -->
+      <section id="menu" class="py-16 bg-black">
+        <div class="mx-auto max-w-7xl px-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-red-200">Menu Dragon d’Or</h2>
+          <p class="text-center font-extrabold text-gray-300 mt-2">Découvrez nos spécialités asiatiques</p>
+
+          <div class="mt-10 space-y-4">
+            <!-- Entrées -->
+            <div x-data="{ open: false }" class="border border-white/10 rounded-xl bg-zinc-900">
+              <button @click="open = !open" :aria-expanded="open" class="w-full flex justify-between items-center px-6 py-4 font-semibold">
+                <span>🍲 Entrées</span>
+                <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fa-solid"></i>
+              </button>
+              <div x-cloak x-show="open" x-transition class="px-6 pb-4 space-y-3 text-gray-300">
+                <div>
+                  <h3 class="font-semibold text-white">Dim Sum assortis</h3>
+                  <p class="text-sm">Raviolis vapeur maison.</p>
+                  <p class="text-red-300 font-semibold">5 500 FCFA</p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Soupe Pékinoise</h3>
+                  <p class="text-sm">Soupe épicée aigre-douce traditionnelle.</p>
+                  <p class="text-red-300 font-semibold">4 000 FCFA</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Plats -->
+            <div x-data="{ open: false }" class="border border-white/10 rounded-xl bg-zinc-900">
+              <button @click="open = !open" :aria-expanded="open" class="w-full flex justify-between items-center px-6 py-4 font-semibold">
+                <span>🍛 Plats</span>
+                <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fa-solid"></i>
+              </button>
+              <div x-cloak x-show="open" x-transition class="px-6 pb-4 space-y-3 text-gray-300">
+                <div>
+                  <h3 class="font-semibold text-white">Canard laqué</h3>
+                  <p class="text-sm">Servi avec crêpes, concombre et sauce hoisin.</p>
+                  <p class="text-red-300 font-semibold">9 500 FCFA</p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Fondue chinoise</h3>
+                  <p class="text-sm">Bouillon parfumé et garnitures au choix.</p>
+                  <p class="text-red-300 font-semibold">12 000 FCFA</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desserts -->
+            <div x-data="{ open: false }" class="border border-white/10 rounded-xl bg-zinc-900">
+              <button @click="open = !open" :aria-expanded="open" class="w-full flex justify-between items-center px-6 py-4 font-semibold">
+                <span>🍰 Desserts</span>
+                <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fa-solid"></i>
+              </button>
+              <div x-cloak x-show="open" x-transition class="px-6 pb-4 space-y-3 text-gray-300">
+                <div>
+                  <h3 class="font-semibold text-white">Perles de coco</h3>
+                  <p class="text-sm">Boules de riz gluant fourrées à la pâte de haricot rouge.</p>
+                  <p class="text-red-300 font-semibold">3 500 FCFA</p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Lychees au sirop</h3>
+                  <p class="text-sm">Servis frais et sucrés.</p>
+                  <p class="text-red-300 font-semibold">2 500 FCFA</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Boissons -->
+            <div x-data="{ open: false }" class="border border-white/10 rounded-xl bg-zinc-900">
+              <button @click="open = !open" :aria-expanded="open" class="w-full flex justify-between items-center px-6 py-4 font-semibold">
+                <span>🍹 Boissons</span>
+                <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fa-solid"></i>
+              </button>
+              <div x-cloak x-show="open" x-transition class="px-6 pb-4 space-y-3 text-gray-300">
+                <div>
+                  <h3 class="font-semibold text-white">Thé au jasmin</h3>
+                  <p class="text-sm">Infusion parfumée et légère.</p>
+                  <p class="text-red-300 font-semibold">1 500 FCFA</p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Cocktail maison</h3>
+                  <p class="text-sm">Mélange exotique avec ou sans alcool.</p>
+                  <p class="text-red-300 font-semibold">4 000 FCFA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Buffet -->
+      <section id="buffet" class="py-16 bg-gradient-to-r from-zinc-900 via-black to-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-red-200">✨ Notre Buffet Gastronomique ✨</h2>
+            <p class="mt-4 text-gray-300 text-lg">
+              Chaque <span class="text-red-400 font-semibold">samedi soir</span>, profitez d’un festin exceptionnel avec une variété de plats raffinés.
+            </p>
+            <p class="mt-2 text-2xl font-extrabold text-red-500">15 000 FCFA / personne</p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-3">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="buffet 1.jpg" alt="Buffet gastronomique, vue 1" loading="lazy" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="buffet 2.jpg" alt="Buffet gastronomique, vue 2" loading="lazy" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="buffet3.jpg" alt="Buffet gastronomique, vue 3" loading="lazy" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+            </div>
+          </div>
+          <div class="text-center mt-10">
+            <a href="#reservation" class="inline-block px-8 py-3 bg-red-600 hover:bg-red-700 font-bold rounded-full shadow-lg transition">Réserver maintenant</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Évènements -->
+      <section id="evenements" class="py-16 px-6 bg-black">
+        <div class="max-w-6xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-red-200 mb-6">Nos évènements</h2>
+          <p class="text-gray-200 text-lg font-bold mb-8">
+            Le restaurant Dragon d’Or est l’endroit parfait pour organiser vos anniversaires, mariages, rencontres professionnelles et soirées privées.
+          </p>
+          <div class="grid gap-6 md:grid-cols-3">
+            <div class="bg-red-600 p-6 rounded-xl shadow">
+              <h3 class="font-bold text-lg">Mariages</h3>
+              <p class="mt-2">Un cadre romantique pour célébrer votre union.</p>
+            </div>
+            <div class="bg-red-600 p-6 rounded-xl shadow">
+              <h3 class="font-bold text-lg">Anniversaires</h3>
+              <p class="mt-2">Faites la fête avec vos proches autour d’un bon repas.</p>
+            </div>
+            <div class="bg-red-600 p-6 rounded-xl shadow">
+              <h3 class="font-bold text-lg">Affaires</h3>
+              <p class="mt-2">Un espace adapté pour vos réunions et conférences.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galerie -->
+      <section id="galerie" class="py-16 bg-zinc-900">
+        <div class="mx-auto max-w-7xl px-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-red-200">Galerie</h2>
+          <div class="relative mt-10 overflow-hidden" id="carouselWrap">
+            <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+              <img src="plat 1.jpg" alt="Plat signature" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="plat 2.jpg" alt="Plat du chef" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="buffet dd.jpg" alt="Buffet Dragon d’Or" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="salle vip.jpg" alt="Salle VIP" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="detail.jpg" alt="Détail de la décoration" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="blle vue.jpg" alt="Belle vue du restaurant" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="dehors.jpg" alt="Extérieur du restaurant" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="magnifique.jpg" alt="Ambiance du restaurant" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="porte dragon.jpg" alt="Porte du dragon" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="reception.jpg" alt="Réception" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="buffet gast.jpg" alt="Buffet gastronomique" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+              <img src="presentation.jpg" alt="Présentation des plats" loading="lazy" class="w-full md:w-1/3 lg:w-1/5 flex-shrink-0 h-48 object-cover px-1 rounded-lg" />
+            </div>
+            <button id="prev" aria-label="Image précédente" class="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-800 p-2 rounded-full shadow-md hover:bg-gray-600 z-10">❮</button>
+            <button id="next" aria-label="Image suivante" class="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-800 p-2 rounded-full shadow-md hover:bg-gray-600 z-10">❯</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact / Réservation -->
+      <section id="reservation" class="py-16 bg-black">
+        <div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-10">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-red-200">Contact &amp; Réservation</h2>
+            <p class="mt-3 text-gray-300">
+              Téléphone :
+              <a href="tel:+22790000000" class="text-red-300 underline">+227 90 00 00 00</a> <!-- TODO : vrai numéro -->
+            </p>
+            <p class="mt-1 text-gray-300">Adresse : Terminus, rue du Grand Hôtel, Niamey</p>
+            <div class="mt-6 rounded-xl overflow-hidden h-64">
+              <iframe title="Carte Google Maps" class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Niamey&output=embed"></iframe>
+            </div>
+          </div>
+
+          <form id="resaForm" action="https://formspree.io/f/your-id" method="POST" class="bg-zinc-900 border border-white/10 rounded-xl p-6">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <input name="nom" type="text" placeholder="Votre nom" required autocomplete="name" aria-label="Votre nom" class="w-full rounded-lg bg-black border border-white/10 px-4 py-3" />
+              <input name="telephone" type="tel" placeholder="Votre téléphone" required autocomplete="tel" aria-label="Votre téléphone" class="w-full rounded-lg bg-black border border-white/10 px-4 py-3" />
+            </div>
+            <input name="email" type="email" placeholder="Votre email (facultatif)" autocomplete="email" aria-label="Votre email" class="mt-4 w-full rounded-lg bg-black border border-white/10 px-4 py-3" />
+            <input name="personnes" type="number" min="1" max="200" placeholder="Nombre de personnes" required aria-label="Nombre de personnes" class="mt-4 w-full rounded-lg bg-black border border-white/10 px-4 py-3" />
+            <input id="resaDate" name="date" type="datetime-local" required aria-label="Date et heure" class="mt-4 w-full rounded-lg bg-black border border-white/10 px-4 py-3" />
+            <textarea name="message" rows="4" placeholder="Message (salle VIP, évènement, allergies…)" aria-label="Message" class="mt-4 w-full rounded-lg bg-black border border-white/10 px-4 py-3"></textarea>
+            <button type="submit" class="mt-4 w-full rounded-full bg-red-600 px-6 py-3 font-bold hover:bg-red-700">Envoyer la demande</button>
+            <button type="button" id="resaWhatsapp" class="mt-3 w-full rounded-full border border-green-500/60 px-6 py-3 font-bold text-green-400 hover:bg-green-600 hover:text-white">
+              <i class="fa-brands fa-whatsapp"></i> Réserver par WhatsApp
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-400 text-sm md:text-base font-bold">
+          &copy; <span id="year">2025</span> Dragon d’Or — Tous droits réservés.
+        </p>
+        <div class="flex items-center gap-4 text-2xl">
+          <a href="https://www.facebook.com/restaurant.dragon.dor.niger" target="_blank" rel="noopener" aria-label="Facebook" class="text-gray-300 hover:text-blue-500 transition"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://wa.me/22700000000" target="_blank" rel="noopener" aria-label="WhatsApp" class="text-gray-300 hover:text-green-500 transition"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="text-gray-300 hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /* ========= CONFIG ========= */
+      const WHATSAPP_NUMBER = "22700000000"; // TODO : numéro WhatsApp du restaurant (sans +)
+
+      /* Plats du jour : 0 = dimanche … 6 = samedi.
+         Le restaurant modifie uniquement ce tableau. "image" est facultatif (ex. "images/plats/lundi.jpg"). */
+      const PLATS_DU_JOUR = {
+        1: { nom: "Riz cantonais au poulet", desc: "Riz sauté aux œufs, petits légumes et poulet tendre.", prix: "4 500 FCFA", emoji: "🍚" },
+        2: { nom: "Nouilles sautées au bœuf", desc: "Nouilles wok, bœuf mariné, poivrons et sauce soja.", prix: "5 000 FCFA", emoji: "🍜" },
+        3: { nom: "Poulet aigre-doux", desc: "Poulet croustillant, ananas et sauce aigre-douce, riz blanc.", prix: "5 000 FCFA", emoji: "🍗" },
+        4: { nom: "Poisson vapeur au gingembre", desc: "Filet de poisson vapeur, gingembre, oignon vert, riz parfumé.", prix: "6 000 FCFA", emoji: "🐟" },
+        5: { nom: "Bœuf sauce poivre noir", desc: "Bœuf sauté à la sauce poivre noir, légumes croquants.", prix: "6 000 FCFA", emoji: "🥩" },
+        6: { nom: "Canard laqué du chef", desc: "Servi avec crêpes, concombre et sauce hoisin. Réservé aux midis.", prix: "9 000 FCFA", emoji: "🦆" },
+        0: { nom: "Dim sum & soupe pékinoise", desc: "Assortiment de raviolis vapeur accompagné d’une soupe épicée.", prix: "5 500 FCFA", emoji: "🥟" },
+      };
+      const JOURS = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+      const ORDRE = [1, 2, 3, 4, 5, 6, 0]; // semaine commençant le lundi
+
+      /* ========= Menu mobile ========= */
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () => {
+        const hidden = mobileMenu.classList.toggle("hidden");
+        menuBtn.setAttribute("aria-expanded", String(!hidden));
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuBtn.setAttribute("aria-expanded", "false");
+        })
+      );
+
+      /* ========= Plat du jour ========= */
+      // Jour actuel à Niamey, quel que soit le fuseau de l'appareil
+      const nowNiamey = new Date(new Date().toLocaleString("en-US", { timeZone: "Africa/Niamey" }));
+      const today = nowNiamey.getDay();
+      let selected = today;
+
+      const tabs = document.getElementById("pdjTabs");
+      const card = document.getElementById("pdjCard");
+
+      function renderPlat() {
+        const p = PLATS_DU_JOUR[selected];
+        const isToday = selected === today;
+        const visuel = p.image
+          ? `<img src="${p.image}" alt="${p.nom}" class="h-full w-full object-cover min-h-48" loading="lazy" />`
+          : `<div class="flex h-full min-h-48 items-center justify-center bg-gradient-to-br from-red-700 to-red-950 text-7xl" aria-hidden="true">${p.emoji}</div>`;
+        card.innerHTML = `
+          ${visuel}
+          <div class="p-6 md:p-8 flex flex-col justify-center">
+            <span class="self-start rounded-full ${isToday ? "bg-red-600" : "bg-white/10"} px-3 py-1 text-xs font-bold">
+              ${isToday ? "Aujourd’hui · " : ""}${JOURS[selected]}
+            </span>
+            <h3 class="mt-3 text-2xl md:text-3xl font-extrabold text-white">${p.nom}</h3>
+            <p class="mt-2 text-gray-300">${p.desc}</p>
+            <p class="mt-4 text-2xl font-extrabold text-red-400">${p.prix}</p>
+            <a href="#reservation" class="mt-5 self-start rounded-full bg-red-600 px-6 py-3 font-bold hover:bg-red-700">Réserver une table</a>
+          </div>`;
+        tabs.querySelectorAll("button").forEach((b) => {
+          const on = Number(b.dataset.day) === selected;
+          b.setAttribute("aria-selected", String(on));
+          b.className = "rounded-full px-4 py-2 text-sm font-bold border transition " +
+            (on ? "bg-red-600 border-red-600 text-white" : "border-white/20 text-gray-300 hover:bg-white/10");
+        });
+      }
+
+      ORDRE.forEach((d) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.dataset.day = d;
+        b.setAttribute("role", "tab");
+        b.textContent = JOURS[d].slice(0, 3) + (d === today ? " •" : "");
+        b.addEventListener("click", () => { selected = d; renderPlat(); });
+        tabs.appendChild(b);
+      });
+      renderPlat();
+
+      /* ========= Carrousel ========= */
+      const carousel = document.getElementById("carousel");
+      const prevBtn = document.getElementById("prev");
+      const nextBtn = document.getElementById("next");
+      const wrap = document.getElementById("carouselWrap");
+      let index = 0;
+
+      function metrics() {
+        const slideWidth = carousel.children[0].offsetWidth;
+        const visible = Math.max(1, Math.round(wrap.offsetWidth / slideWidth));
+        return { slideWidth, maxIndex: Math.max(0, carousel.children.length - visible) };
+      }
+      function updateCarousel() {
+        const { slideWidth, maxIndex } = metrics();
+        if (index > maxIndex) index = 0;
+        carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+      }
+      function go(step) {
+        const { maxIndex } = metrics();
+        index = index + step;
+        if (index > maxIndex) index = 0;
+        if (index < 0) index = maxIndex;
+        updateCarousel();
+      }
+      nextBtn.addEventListener("click", () => go(1));
+      prevBtn.addEventListener("click", () => go(-1));
+      window.addEventListener("resize", updateCarousel);
+
+      let timer = setInterval(() => go(1), 4000);
+      wrap.addEventListener("mouseenter", () => clearInterval(timer));
+      wrap.addEventListener("mouseleave", () => { timer = setInterval(() => go(1), 4000); });
+
+      /* ========= Réservation ========= */
+      const dateInput = document.getElementById("resaDate");
+      const pad = (n) => String(n).padStart(2, "0");
+      const n = new Date();
+      dateInput.min = `${n.getFullYear()}-${pad(n.getMonth() + 1)}-${pad(n.getDate())}T${pad(n.getHours())}:${pad(n.getMinutes())}`;
+
+      document.getElementById("resaWhatsapp").addEventListener("click", () => {
+        const form = document.getElementById("resaForm");
+        if (!form.reportValidity()) return;
+        const f = new FormData(form);
+        const d = new Date(f.get("date")).toLocaleString("fr-FR", { dateStyle: "full", timeStyle: "short" });
+        const msg =
+          `Bonjour Dragon d’Or, je souhaite réserver :\n` +
+          `• Nom : ${f.get("nom")}\n• Téléphone : ${f.get("telephone")}\n` +
+          `• Personnes : ${f.get("personnes")}\n• Date : ${d}\n` +
+          (f.get("message") ? `• Message : ${f.get("message")}` : "");
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
+      });
+
+      /* ========= Divers ========= */
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(() => console.log("✅ Service Worker enregistré"))
+          .catch((err) => console.log("❌ Erreur Service Worker:", err));
+      }
+    </script>
+  </body>
+</html>
